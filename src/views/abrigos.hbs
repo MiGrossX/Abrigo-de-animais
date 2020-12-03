@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Localize um abrigo/ong</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" 
+        crossorigin=""/>
+
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" 
+        crossorigin=""></script>
+
+        <link rel="icon" href="/images/logo.svg">
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/animations.css">
+        <link rel="stylesheet" href="/css/page-abrigos.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="page-abrigos">
+            <aside class="animate-right">
+                <header>
+                    <img class="logo" src="/images/logo.svg" alt="LovePet">
+
+                    <h2>Escolha um abrigo no mapa</h2>
+
+                   
+                    <p>Há várias formas de ajudar:
+                    </p>
+                    <p>Adotando</p>
+                    <p>Doando seu carinho e atenção</p>
+                    <p>Doando dinheiro ao abrigo</p>
+                    <p>Ou divulgando o projeto</p>
+                   
+
+                </header>
+                
+            </aside>
+
+            <div id="mapid" class="animate-appear"></div>
+
+            <div class="abrigos">
+                {{#each abrigos}}
+
+            <span hidden
+              data-id="{{this.id}}"
+              data-name="{{this.name}}"
+              data-lat="{{this.lat}}"
+              data-lng="{{this.lng}}"
+            ></span>
+
+            {{/each}}
+            </div>
+
+            
+
+            <a href="/create-abrigo" class="create-abrigo" title="Cadastre um abrigo/ong">
+                <img src="/images/plus.svg" alt="Criar abrigo">
+            </a>
+        </div>
+
+        <script src="/scripts/page-abrigos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+#page-landing {
+    background:white;
+
+    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+#container {
+    margin: auto;
+    width: min(90%, 112rem);
+}
+
+.location, h1, .visit p {
+    height: 16vh;
+}
+
+#logo {
+    animation-delay: 50ms;
+    margin-top: 20px;
+}
+
+.location {
+    animation-delay: 100ms;
+}
+
+main h1 {
+    animation-delay: 150ms;
+    font-size: clamp(4rem, 8vw, 6.4rem);
+}
+
+.visit a:hover {
+    background:  #52bdeb;
+}
+
+.visit p {
+    animation-delay: 200ms;
+}
+
+.visit a {
+    width: 6rem;
+    height: 6rem;
+    background:  #28aae2;
+
+    border: 0;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+
+    transition: background 200ms;
+    animation-delay: 250ms;
+}
+
+/* versão desktop*/
+@media (min-width: 850px) {
+    #container {
+        background: url("../images/fundo.svg") no-repeat 80% / 
+        clamp(30rem, 35vw, 56rem);
+        padding: 5rem 2 rem;
+    }
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .location, h1, visit p {
+        height: initial;
+        text-align: initial;
+    }
+
+    .location {
+        text-align: right;
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
+
+    main h1 {
+        font-weight: bold;
+        line-height: 0.88;
+
+        margin: clamp(10%, 9vh, 12%) 0 4rem;
+
+        width: min(300px, 80%);
+    }
+
+    .visit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .visit p {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        
+    }
+
+    .visit a {
+        margin: initial;
+    }
+}
